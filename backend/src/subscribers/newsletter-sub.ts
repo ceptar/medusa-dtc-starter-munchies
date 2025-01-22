@@ -29,7 +29,7 @@ export default async function subscribeNewsletterHandler({
     // if (error) throw new Error("Error subscribing email");
 
     const response = await fetch(
-      "https://munchies.medusajs.app/store/email/welcome/" + event.data.id,
+      "https://ynvssn-9000.csb.app/store/email/welcome/" + event.data.id,
       {
         method: "POST",
         headers: {

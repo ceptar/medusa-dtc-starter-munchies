@@ -6,7 +6,7 @@ export default async function orderCreatedHandler({
 }: SubscriberArgs<{ id: string }>) {
   try {
     const response = await fetch(
-      "https://munchies.medusajs.app/store/email/order-confirmation/" +
+      "https://ynvssn-9000.csb.app/store/email/order-confirmation/" +
         event.data.id,
       {
         method: "POST",

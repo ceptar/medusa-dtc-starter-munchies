@@ -16,8 +16,8 @@ export default defineConfig({
     },
   },
   admin: {
-    backendUrl: "https://munchies.medusajs.app",
-    // backendUrl: "http://localhost:9000",
+    // backendUrl: "https://munchies.medusajs.app",
+    backendUrl: "https://ynvssn-9000.csb.app",
   },
   modules: [
     {
@@ -27,7 +27,7 @@ export default defineConfig({
         project_id: process.env.SANITY_PROJECT_ID,
         api_version: new Date().toISOString().split("T")[0],
         dataset: "production",
-        studio_url: "https://munchies-tinloof.vercel.app/cms",
+        studio_url: "https://ynvssn-3000.csb.app/cms",
         type_map: {
           collection: "collection",
           category: "category",
@@ -35,26 +35,26 @@ export default defineConfig({
         },
       },
     },
-    {
-      resolve: "@medusajs/medusa/file",
-      key: Modules.FILE,
-      options: {
-        providers: [
-          {
-            resolve: "@medusajs/medusa/file-s3",
-            id: "s3",
-            options: {
-              file_url: process.env.S3_FILE_URL,
-              access_key_id: process.env.S3_ACCESS_KEY_ID,
-              secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
-              region: process.env.S3_REGION,
-              bucket: process.env.S3_BUCKET,
-              endpoint: process.env.S3_ENDPOINT,
-            },
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: "@medusajs/medusa/file",
+    //   key: Modules.FILE,
+    //   options: {
+    //     providers: [
+    //       {
+    //         resolve: "@medusajs/medusa/file-s3",
+    //         id: "s3",
+    //         options: {
+    //           file_url: process.env.S3_FILE_URL,
+    //           access_key_id: process.env.S3_ACCESS_KEY_ID,
+    //           secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
+    //           region: process.env.S3_REGION,
+    //           bucket: process.env.S3_BUCKET,
+    //           endpoint: process.env.S3_ENDPOINT,
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     {
       resolve: "@medusajs/medusa/payment",
       key: Modules.PAYMENT,
